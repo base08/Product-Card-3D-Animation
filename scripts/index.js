@@ -13,9 +13,9 @@ const purple = document.querySelector("#purple");
 const yellow = document.querySelector("#yellow");
 
 container.addEventListener("mousemove", (e) => {
-  let xAxis = (window.innerWidth / 2 - e.pageX) / 20;
+  let xAxis = ((window.innerWidth / 2 - e.pageX) / 20) * -1;
   let yAxis = (window.innerHeight / 2 - e.pageY) / 20;
-  card.style.transform = `rotateY(${yAxis}deg) rotateX(${xAxis}deg)`;
+  card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 });
 
 container.addEventListener("mouseenter", (e) => {
